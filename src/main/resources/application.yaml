@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9094
+    admin:
+      auto-create: true
+    producers:
+      ack: 0
+    consumers:
+      sse:
+        topic: sse-topic
+        clientId: sse-client
+        groupId: sse-group-id
+        session-timeout-ms: 10000
+        default-api-timeout-ms: 60000
+        request-timeout-ms: 30000
+        reconnect-backoff-max-ms: 1000
+        reconnect-backoff-ms: 50
+        retry-backoff-ms: 100
+        enable-auto-commit: true
